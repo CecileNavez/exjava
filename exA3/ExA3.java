@@ -8,7 +8,7 @@ public class ExA3 {
 		String title = "Learning Java";
 		int numberofdays = 5;
 		double priceperday = 800;
-		Boolean priorknowledge = false;
+		boolean priorknowledge = false;
 		
 		List<String> instructorNames = new ArrayList<String>();
 		instructorNames.add("Sandy");
@@ -19,8 +19,8 @@ public class ExA3 {
 		
 		
 		System.out.println("The title of the course is '" + title + "', the course duration is " + numberofdays + " days, the price per day is " + priceperday + "EUR and it is " + priorknowledge + " to think that you need prerequisite to follow the course.");
-		System.out.println("Number of instructors for this course : " + instructorNames.size());
-		System.out.println("the total price of the course is " + totalPriceOfTheCourse + " EUR (included VAT)");
+		System.out.println("Number of instructors for this course : " + instructorNames.size() + ".");
+		System.out.println("The total price of the course is " + totalPriceOfTheCourse + " EUR (included VAT).");
 		
 	}
 
