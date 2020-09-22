@@ -10,16 +10,16 @@ public class ExA3 {
 		double priceperday = 800;
 		Boolean priorknowledge = false;
 		
-		List<String> instructorName = new ArrayList<String>();
-		instructorName.add("Sandy");
-		instructorName.add("Cecile");
-		instructorName.add("Philippe");
+		List<String> instructorNames = new ArrayList<String>();
+		instructorNames.add("Sandy");
+		instructorNames.add("Cecile");
+		instructorNames.add("Philippe");
 		
 		double totalPriceOfTheCourse = numberofdays * priceperday * 1.21;
 		
 		
 		System.out.println("The title of the course is '" + title + "', the course duration is " + numberofdays + " days, the price per day is " + priceperday + "EUR and it is " + priorknowledge + " to think that you need prerequisite to follow the course.");
-		System.out.println("Number of instructors for this course : " + instructorName.size());
+		System.out.println("Number of instructors for this course : " + instructorNames.size());
 		System.out.println("the total price of the course is " + totalPriceOfTheCourse + " EUR (included VAT)");
 		
 	}
