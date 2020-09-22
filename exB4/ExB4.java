@@ -7,8 +7,9 @@ public class ExB4 {
 	
 		Scanner input = new Scanner(System.in);
 		System.out.println("Which language ? ");
-		String language = input.nextLine();	
+		String language = input.nextLine().toUpperCase();	
 		
+		input.close();
 		String welcomeMessage;
 		
 		switch (language) {

@@ -11,7 +11,10 @@ public class ExB5 {
 		while (answer.equals("Y")){
 			System.out.println("Welcome !");
 			System.out.println("Would you like to be greeted again ? (Y/N) ");
-			answer = input.nextLine();
-			} 
+			answer = input.nextLine().toUpperCase();
+			}
+
+			input.close();			
+			
 		}
 }
