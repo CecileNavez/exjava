@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class ExC5 {
 	
@@ -40,20 +41,18 @@ public class ExC5 {
 
 		System.out.println("Enter the number of days : ");
 		numberofdays = input.nextInt();
-			
 				
 		System.out.println("Enter the price per day : ");
 		priceperday = input.nextDouble();
 		
-		
 		System.out.println("A knowledge is pre-required (false/true) ? : ");
 		priorknowledge = input.nextBoolean();
 		
-		input.close();
+		//input.close();
 		
 		ExC5.printInfo(title, numberofdays, priceperday, priorknowledge);
 		
-		} catch (NumberFormatException e) {
+		} catch (InputMismatchException e) {
 			System.out.println("Insert correct argument, try again");
 		}
 		
