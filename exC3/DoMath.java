@@ -1,13 +1,14 @@
+import java.util.List;
+
 public class DoMath {
 	
-	public static double calculateAverage() {
+	public static double calculateAverage(List<Integer> listOfIntegers) {
 		
-		int[] listOfIntegers = {6,5,4,3,1}; 
 		double total=0;
 		for (int value: listOfIntegers) {
 			total += value;
 		}
 		
-		return total/listOfIntegers.length;
+		return total/listOfIntegers.size();
 		}
 }
