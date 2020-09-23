@@ -14,18 +14,9 @@ import java.util.List;
 
 public class ExD2 {
 	
-	/*public static void printInfo(String title, int numberofdays, double priceperday, boolean priorknowledge) {
-				
-		System.out.println("The title of the course is '" + title + "'.");
-		System.out.println("The course duration is " + numberofdays + " days.");
-		System.out.println("The price per day is " + priceperday + " EUR.");
-		System.out.println("It is " + priorknowledge + " to think that you need prerequisite to follow the course.");
-		System.out.println("The total price of the course is " + totalPrice(numberofdays, priceperday, priorknowledge) + " EUR.");
-	}*/
-	
 	public static void printInfo(String title, int numberofdays, double priceperday,boolean priorknowledge ) throws IOException{
 	   BufferedWriter bw = Files.newBufferedWriter(Paths.get("printing.txt"));
-	   double totalPrice = calculatePrice(numberofdays, priceperday, priorknowledge );
+	   double totalPrice = totalPrice(numberofdays, priceperday, priorknowledge );
 	   bw.write("The " + title + " course takes " + numberofdays + " days and costs " + totalPrice + " euros. \nPrior knowledge required: " + priorknowledge );
 	   bw.close();
 	}
@@ -55,7 +46,7 @@ public class ExD2 {
 		boolean priorknowledge;
 			
 		Path path = Paths.get("instructors.txt");
-		try (BufferedReader br = Files.newBufferedReader(path)){
+		try(BufferedReader br = Files.newBufferedReader(path)){
 			Scanner input = new Scanner(System.in);
 			System.out.println("Enter the title : ");
 			title = input.nextLine();

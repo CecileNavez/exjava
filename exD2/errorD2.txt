@@ -1,0 +1,6 @@
+ExD2.java:49: error: cannot find symbol
+                try(BufferedReader br = Files.newBufferedReader(path)){
+                    ^
+  symbol:   class BufferedReader
+  location: class ExD2
+1 error
