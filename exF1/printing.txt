@@ -1,0 +1,2 @@
+The Java Training course takes 5 days and costs 3000.0 euros. 
+Prior knowledge required: true
