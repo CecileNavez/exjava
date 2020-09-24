@@ -1,8 +1,7 @@
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.io.BufferedReader;
+import java.util.ArrayList;
 import java.io.BufferedWriter;
 
 public class Course{
@@ -12,6 +11,7 @@ public class Course{
 	private int numberOfDays;
 	private double pricePerDay;
 	private boolean priorKnowledgeRequired;
+	private ArrayList<String> instructors = new ArrayList<>();
 	
 	public Course(String title, int numberOfDays, double pricePerDay, boolean priorKnowledgeRequired) {
 		this.title = title;
@@ -54,16 +54,38 @@ public class Course{
 		this.priorKnowledgeRequired = priorKnowledgeRequired;
 	}
 	
+	public void setInstructors(ArrayList<String> instructors){
+		this.instructors=instructors;
+	}
+	
+	public ArrayList<String> getInstructors(){
+		return instructors;
+	}
+	
 	//methods
 	
-	public void printInfo(String title, int numberOfDays, double pricePerDay,boolean priorKnowledgeRequired ) throws IOException{
+	public void addInstructor(String instructor){
+		instructors.add(instructor);
+	}
+	
+	public void removeInstructor(String instructor){
+		instructors.remove(instructor);
+	}
+	
+	public void printInfo() throws IOException{
 	   BufferedWriter bw = Files.newBufferedWriter(Paths.get("printing.txt"));
-	   double totalPrice = calculatePrice(numberOfDays, pricePerDay, priorKnowledgeRequired );
-	   bw.write("The " + title + " course takes " + numberOfDays + " days and costs " + totalPrice + " euros. \nPrior knowledge required: " + priorKnowledgeRequired );
+	   double totalPrice = this.calculatePrice();
+	   bw.write(
+				"The title of the course is '" + title + "'.\n" +
+				"The course duration is " + numberOfDays + " days.\n" +
+				"The price per day is " + pricePerDay + " EUR.\n" +
+				"It is " + priorKnowledgeRequired + " to think that you need prerequisite to follow the course.\n" +
+				"The total price of the course is " + totalPrice + " EUR."
+				);
 	   bw.close();
 	}
 	
-	public double calculatePrice(int numberOfDays, double pricePerDay,boolean priorKnowledgeRequired ){
+	public double calculatePrice(){
 		double totalPrice = numberOfDays*pricePerDay;
 		if (!(numberOfDays>3 && priorKnowledgeRequired)) {
 			totalPrice*=1.21;

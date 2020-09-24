@@ -1,2 +1,5 @@
-The Java Training course takes 5 days and costs 3000.0 euros. 
-Prior knowledge required: true
+The title of the course is 'Java'.
+The course duration is 5 days.
+The price per day is 250.0 EUR.
+It is true to think that you need prerequisite to follow the course.
+The total price of the course is 1250.0 EUR.
