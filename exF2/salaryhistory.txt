@@ -1,0 +1,7 @@
+Salary of Cecile at 37 is 3000.0
+Salary of Cecile at 42 is 3090.0
+Salary of Cecile at 47 is 3182.7000000000003
+Salary of Cecile at 52 is 3278.1810000000005
+Salary of Cecile at 57 is 3376.526430000001
+Salary of Cecile at 62 is 3477.8222229000007
+Maximum salary reached
